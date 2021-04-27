@@ -30,11 +30,15 @@ import tacos.data.TacoRepository;
 @SessionAttributes("order")
 public class DesignTacoController {
 
-    @Autowired
     private IngredientRepository ingredientRepository;
+    private TacoRepository tacoRepository;
 
     @Autowired
-    private TacoRepository tacoRepository;
+    public DesignTacoController(IngredientRepository ingredientRepository,
+                                TacoRepository tacoRepository) {
+        this.ingredientRepository = ingredientRepository;
+        this.tacoRepository = tacoRepository;
+    }
 
     @ModelAttribute(name = "order")
     public Order order() {
