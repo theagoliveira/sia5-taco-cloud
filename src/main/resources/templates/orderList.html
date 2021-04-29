@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Taco Cloud</title>
+  </head>
+
+  <body>
+    <h1>Your Orders</h1>
+    <img th:src="@{/images/TacoCloud.png}" alt="TacoCloud Logo" />
+    <form action="" method="POST" th:action="@{/logout}">
+      <input type="submit" value="Logout">
+    </form>
+
+    <div th:each="order : ${orders}">
+      <h2 th:text="'Order #' + ${order.id}">ORDER</h2>
+      <p>
+        <label>Name: </label>
+        <span th:text="${order.deliveryName}">PROPERTY</span>
+      </p>
+      <p>
+        <label>Street address: </label>
+        <span th:text="${order.deliveryStreet}">PROPERTY</span>
+      </p>
+      <p>
+        <label>City: </label>
+        <span th:text="${order.deliveryCity}">PROPERTY</span>
+      </p>
+      <p>
+        <label>State: </label>
+        <span th:text="${order.deliveryState}">PROPERTY</span>
+      </p>
+      <p>
+        <label>Zip code: </label>
+        <span th:text="${order.deliveryZip}">PROPERTY</span>
+      </p>
+      <p>
+        <label>Credit Card #: </label>
+        <span th:text="${order.ccNumber}">PROPERTY</span>
+      </p>
+      <p>
+        <label>Expiration: </label>
+        <span th:text="${order.ccExpiration}">PROPERTY</span>
+      </p>
+      <p>
+        <label>CVV: </label>
+        <span th:text="${order.ccCVV}">PROPERTY</span>
+      </p>
+      <p>
+        <label># of Tacos: </label>
+        <span th:text="${order.tacos.size()}">PROPERTY</span>
+      </p>
+    </div>
+  </body>
+
+</html>
