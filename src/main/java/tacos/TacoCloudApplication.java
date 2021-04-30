@@ -6,12 +6,16 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.hateoas.PagedModel;
+import org.springframework.hateoas.server.EntityLinks;
+import org.springframework.hateoas.server.RepresentationModelProcessor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import tacos.Ingredient.Type;
 import tacos.data.IngredientRepository;
 import tacos.data.TacoRepository;
 import tacos.data.UserRepository;
+import tacos.web.api.TacoEntityModel;
 
 @SpringBootApplication
 public class TacoCloudApplication {
@@ -84,6 +88,19 @@ public class TacoCloudApplication {
                     Arrays.asList(flourTortilla, cornTortilla, tomatoes, lettuce, salsa)
                 );
                 tacoRepository.save(taco3);
+            }
+
+        };
+    }
+
+    @Bean
+    public RepresentationModelProcessor<PagedModel<TacoEntityModel>> tacoProcessor(EntityLinks links) {
+        return new RepresentationModelProcessor<PagedModel<TacoEntityModel>>() {
+
+            @Override
+            public PagedModel<TacoEntityModel> process(PagedModel<TacoEntityModel> model) {
+                model.add(links.linkFor(Taco.class).slash("recent").withRel("recents"));
+                return model;
             }
 
         };
