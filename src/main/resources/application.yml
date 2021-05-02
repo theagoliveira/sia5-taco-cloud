@@ -16,21 +16,21 @@ spring:
   data:
     rest:
       base-path: /api
-  jms:
-    template:
-      default-destination: tacocloud.order.queue
-  rabbitmq:
-    template:
-      exchange: tacocloud.orders
-      routing-key: kitchens.central
-      receive-timeout: 30000
-  kafka:
-    bootstrap-servers:
-      - localhost:9092
-    consumer:
-      group-id: test-group-id
-    template:
-      default-topic: tacocloud.orders.topic
-    producer:
-      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  # jms:
+  #   template:
+  #     default-destination: tacocloud.order.queue
+  # rabbitmq:
+  #   template:
+  #     exchange: tacocloud.orders
+  #     routing-key: kitchens.central
+  #     receive-timeout: 30000
+  # kafka:
+  #   bootstrap-servers:
+  #     - localhost:9092
+  #   consumer:
+  #     group-id: test-group-id
+  #   template:
+  #     default-topic: tacocloud.orders.topic
+  #   producer:
+  #     key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  #     value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
