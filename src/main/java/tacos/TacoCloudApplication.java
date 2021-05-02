@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import tacos.Ingredient.Type;
 import tacos.data.IngredientRepository;
+import tacos.data.OrderRepository;
 import tacos.data.TacoRepository;
 import tacos.data.UserRepository;
 import tacos.web.api.TacoEntityModel;
@@ -27,6 +28,7 @@ public class TacoCloudApplication {
     @Bean
     public CommandLineRunner dataLoader(IngredientRepository ingredientRepository,
                                         UserRepository userRepository,
+                                        OrderRepository orderRepository,
                                         PasswordEncoder passwordEncoder,
                                         TacoRepository tacoRepository) {
         return new CommandLineRunner() {
@@ -55,17 +57,20 @@ public class TacoCloudApplication {
                 ingredientRepository.save(salsa);
                 ingredientRepository.save(sourCream);
 
+                User user1 = new User(
+                        "thiago",
+                        passwordEncoder.encode("1234"),
+                        "Thiago",
+                        "Rua X",
+                        "Cidade Y",
+                        "AL",
+                        "12345678",
+                        "999999999"
+                );
+
                 userRepository.save(
-                    new User(
-                            "thiago",
-                            passwordEncoder.encode("1234"),
-                            "Thiago",
-                            "Rua X",
-                            "Cidade Y",
-                            "AL",
-                            "12345678",
-                            "999999999"
-                    )
+                    user1
+
                 );
 
                 Taco taco1 = new Taco();
@@ -88,6 +93,19 @@ public class TacoCloudApplication {
                     Arrays.asList(flourTortilla, cornTortilla, tomatoes, lettuce, salsa)
                 );
                 tacoRepository.save(taco3);
+
+                Order order1 = new Order();
+                order1.setDeliveryName("Tico");
+                order1.setDeliveryStreet("Street");
+                order1.setDeliveryCity("City");
+                order1.setDeliveryState("ST");
+                order1.setDeliveryZip("12345678");
+                order1.setCcNumber("5240022161962801");
+                order1.setCcExpiration("03/30");
+                order1.setCcCVV("123");
+                order1.setTacos(Arrays.asList(taco1, taco2, taco3));
+                order1.setUser(user1);
+                orderRepository.save(order1);
             }
 
         };

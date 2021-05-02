@@ -6,6 +6,15 @@ import org.springframework.stereotype.Service;
 
 import tacos.Order;
 
+/*
+// TEST KAFTA
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import tacos.data.OrderRepository;
+
+
+@RestController
+ */
 @Service
 public class KafkaOrderMessagingService implements OrderMessagingService {
 
@@ -17,4 +26,15 @@ public class KafkaOrderMessagingService implements OrderMessagingService {
         kafkaTemplate.sendDefault(order);
     }
 
+    /* 
+    // TEST KAFTA
+    @Autowired
+    private OrderRepository orderRepository;
+
+    @GetMapping("/kafkatest")
+    public void sendOrderTest() {
+        Order orderTest = orderRepository.findByDeliveryName("Tico");
+        kafkaTemplate.sendDefault(orderTest);
+    }
+     */
 }

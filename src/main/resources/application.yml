@@ -15,5 +15,12 @@ spring:
       routing-key: kitchens.central
       receive-timeout: 30000
   kafka:
+    bootstrap-servers:
+      - localhost:9092
+    consumer:
+      group-id: test-group-id
     template:
       default-topic: tacocloud.orders.topic
+    producer:
+      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
