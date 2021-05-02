@@ -1,4 +1,4 @@
-package tacos.messaging;
+/* package tacos.messaging;
 
 import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.Message;
@@ -31,3 +31,4 @@ public class RabbitOrderMessagingService implements OrderMessagingService {
     }
 
 }
+ */
