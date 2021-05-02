@@ -4,6 +4,6 @@ import tacos.Order;
 
 public interface OrderMessagingService {
 
-    String convertAndSendOrder(Order order);
+    void sendOrder(Order order);
 
 }

@@ -1,4 +1,4 @@
-package tacos.messaging;
+/* package tacos.messaging;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -29,3 +29,4 @@ public class JmsOrderMessagingService implements OrderMessagingService {
     }
 
 }
+ */

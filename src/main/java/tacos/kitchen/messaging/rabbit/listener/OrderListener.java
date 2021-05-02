@@ -1,7 +1,7 @@
-/* package tacos.kitchen.messaging.jms.listener;
+package tacos.kitchen.messaging.rabbit.listener;
 
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import tacos.Order;
@@ -13,10 +13,9 @@ public class OrderListener {
     @Autowired
     private KitchenUI ui;
 
-    @JmsListener(destination = "tacocloud.order.queue")
+    @RabbitListener(queues = "tacocloud.order.queue")
     public void receiveOrder(Order order) {
         ui.displayOrder(order);
     }
 
 }
- */

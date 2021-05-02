@@ -4,6 +4,6 @@ import tacos.Order;
 
 public interface OrderReceiver {
 
-    Order receiveAndConvertOrder();
+    Order receiveOrder();
 
 }
