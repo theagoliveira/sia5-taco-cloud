@@ -1,6 +1,6 @@
 # Taco Cloud
 
-Project from the book **Spring in Action, Fifth Edition** by Craig Walls _(from Chapter 1 to Chapter 9)_
+Project from the book **Spring in Action, Fifth Edition** by Craig Walls _(from Chapter 1 to Chapter 8)_
 
 - [:book: Official page (Manning Publications)](https://www.manning.com/books/spring-in-action-sixth-edition)
 
