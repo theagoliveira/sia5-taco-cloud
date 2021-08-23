@@ -13,9 +13,14 @@ taco:
 #     poll-rate: 10000
 
 spring:
+  jpa:
+    show-sql: true
   data:
     rest:
       base-path: /api
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
   # jms:
   #   template:
   #     default-destination: tacocloud.order.queue
@@ -34,3 +39,18 @@ spring:
   #   producer:
   #     key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   #     value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+logging:
+  level:
+    '[tacos]': debug
+
+bucket4j:
+  enabled: true
+  filters:
+  - cache-name: buckets
+    url: .*
+    rate-limits:
+    - bandwidths:
+      - capacity: 5
+        time: 10
+        unit: seconds
