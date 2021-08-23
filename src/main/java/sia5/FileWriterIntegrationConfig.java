@@ -1,4 +1,4 @@
-package sia5;
+/* package sia5;
 
 import java.io.File;
 
@@ -13,37 +13,35 @@ import org.springframework.integration.file.support.FileExistsMode;
 @Configuration
 public class FileWriterIntegrationConfig {
 
-    /* 
-    // CONFIGURING INTEGRATION FLOWS IN JAVA
+    // // CONFIGURING INTEGRATION FLOWS IN JAVA
 
-    @Bean
-    @Transformer(inputChannel = "textInChannel", outputChannel = "fileWriterChannel")
-    public GenericTransformer<String, String> upperCaseTransformer() {
-        return String::toUpperCase;
-    }
+    // @Bean
+    // @Transformer(inputChannel = "textInChannel", outputChannel = "fileWriterChannel")
+    // public GenericTransformer<String, String> upperCaseTransformer() {
+    //     return String::toUpperCase;
+    // }
 
-    @Bean
-    @ServiceActivator(inputChannel = "fileWriterChannel")
-    public FileWritingMessageHandler fileWriter() {
-        FileWritingMessageHandler handler = new FileWritingMessageHandler(
-                new File("/tmp/sia5/files")
-        );
-        handler.setExpectReply(false);
-        handler.setFileExistsMode(FileExistsMode.APPEND);
-        handler.setAppendNewLine(true);
-        return handler;
-    }
+    // @Bean
+    // @ServiceActivator(inputChannel = "fileWriterChannel")
+    // public FileWritingMessageHandler fileWriter() {
+    //     FileWritingMessageHandler handler = new FileWritingMessageHandler(
+    //             new File("/tmp/sia5/files")
+    //     );
+    //     handler.setExpectReply(false);
+    //     handler.setFileExistsMode(FileExistsMode.APPEND);
+    //     handler.setAppendNewLine(true);
+    //     return handler;
+    // }
 
-    @Bean
-    public MessageChannel textInChannel() {
-        return new DirectChannel();
-    }
+    // @Bean
+    // public MessageChannel textInChannel() {
+    //     return new DirectChannel();
+    // }
 
-    @Bean
-    public MessageChannel fileWriterChannel() {
-        return new DirectChannel();
-    }
-     */
+    // @Bean
+    // public MessageChannel fileWriterChannel() {
+    //     return new DirectChannel();
+    // }
 
     // USING SPRING INTEGRATION'S DSL CONFIGURATION
     @Bean
@@ -60,3 +58,4 @@ public class FileWriterIntegrationConfig {
     }
 
 }
+ */

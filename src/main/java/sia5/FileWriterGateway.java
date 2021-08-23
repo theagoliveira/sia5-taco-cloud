@@ -1,4 +1,4 @@
-package sia5;
+/* package sia5;
 
 import org.springframework.integration.annotation.MessagingGateway;
 import org.springframework.integration.file.FileHeaders;
@@ -10,3 +10,4 @@ public interface FileWriterGateway {
     void writeToFile(@Header(FileHeaders.FILENAME) String filename, String data);
 
 }
+ */

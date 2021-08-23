@@ -1,4 +1,4 @@
-package tacos.email;
+/* package tacos.email;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -86,3 +86,4 @@ public class EmailToOrderTransformer extends AbstractMailMessageTransformer<Orde
     };
 
 }
+ */

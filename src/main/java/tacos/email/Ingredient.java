@@ -1,4 +1,4 @@
-package tacos.email;
+/* package tacos.email;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -14,3 +14,4 @@ public class Ingredient {
     private final String name;
 
 }
+ */

@@ -1,4 +1,4 @@
-package tacos.email;
+/* package tacos.email;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.handler.GenericHandler;
@@ -22,3 +22,4 @@ public class OrderSubmitMessageHandler implements GenericHandler<Order> {
     }
 
 }
+ */
