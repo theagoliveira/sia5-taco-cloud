@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "251122fb-725e-47ac-9378-ee918b02e8b1",
+		"name": "Spring in Action, 5th ed., Chapter 6 (Heroku)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recent Tacos",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/tacos/recent",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"tacos",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tacos",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/tacos",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"tacos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingredients",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/ingredients",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"ingredients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/orders",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/users",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Home",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Taco by ID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/tacos/2",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"tacos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingredient by ID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/api/ingredients/FLTO",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"ingredients",
+						"FLTO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Taco (disabled)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"postman-taco\",\n    \"ingredients\": [\n        {\n            \"id\": \"COTO\",\n            \"name\": \"Corn Tortilla\",\n            \"type\": \"WRAP\"\n        },\n        {\n            \"id\": \"GRBF\",\n            \"name\": \"Ground Beef\",\n            \"type\": \"PROTEIN\"\n        },\n        {\n            \"id\": \"CHED\",\n            \"name\": \"Cheddar\",\n            \"type\": \"CHEESE\"\n        },\n        {\n            \"id\": \"TMTO\",\n            \"name\": \"Diced Tomatoes\",\n            \"type\": \"VEGGIES\"\n        },\n        {\n            \"id\": \"SRCR\",\n            \"name\": \"Sour Cream\",\n            \"type\": \"SAUCE\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://safe-caverns-88645.herokuapp.com/design",
+					"protocol": "https",
+					"host": [
+						"safe-caverns-88645",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"design"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
